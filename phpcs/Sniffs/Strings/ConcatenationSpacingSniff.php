@@ -51,7 +51,6 @@ class ConcatenationSpacingSniff implements Sniff
     public function register()
     {
         return [T_STRING_CONCAT];
-
     }//end register()
 
 
@@ -74,7 +73,7 @@ class ConcatenationSpacingSniff implements Sniff
             $this->ignoreBefore = true;
         }
 
-        $this->spacing = (int) $this->spacing;
+        $this->spacing = (int)$this->spacing;
 
         if ($this->ignoreBefore === false) {
             if ($tokens[($stackPtr - 1)]['code'] !== T_WHITESPACE) {
@@ -138,11 +137,11 @@ class ConcatenationSpacingSniff implements Sniff
                         && ($tokens[($stackPtr - 2)]['code'] === T_LNUMBER
                         || $tokens[($stackPtr - 2)]['code'] === T_DNUMBER)
                     ) {
-                        $phpcsFile->fixer->replaceToken(($stackPtr - 2), '('.$tokens[($stackPtr - 2)]['content'].')');
+                        $phpcsFile->fixer->replaceToken(($stackPtr - 2), '('. $tokens[($stackPtr - 2)]['content']. ')');
                     }
 
                     $phpcsFile->fixer->endChangeset();
-                } else if ($this->spacing > 0) {
+                } elseif ($this->spacing > 0) {
                     $phpcsFile->fixer->addContent(($stackPtr - 1), $padding);
                 }
             }
@@ -155,17 +154,14 @@ class ConcatenationSpacingSniff implements Sniff
                         && ($tokens[($stackPtr + 2)]['code'] === T_LNUMBER
                         || $tokens[($stackPtr + 2)]['code'] === T_DNUMBER)
                     ) {
-                        $phpcsFile->fixer->replaceToken(($stackPtr + 2), '('.$tokens[($stackPtr + 2)]['content'].')');
+                        $phpcsFile->fixer->replaceToken(($stackPtr + 2), '('. $tokens[($stackPtr + 2)]['content']. ')');
                     }
 
                     $phpcsFile->fixer->endChangeset();
-                } else if ($this->spacing > 0) {
+                } elseif ($this->spacing > 0) {
                     $phpcsFile->fixer->addContent($stackPtr, $padding);
                 }
             }
         }//end if
-
     }//end process()
-
-
 }//end class

@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <ruleset name="API Skeletons" namespace="API-Skeletons\CS\Standard">
     <description>v1.0 Coding Standard for API Skeletons</description>
-    <file>src</file>
-    <file>test</file>
+    <file>phpcs</file>
     <exclude-pattern type="relative">Bootstrap.php</exclude-pattern>
     <exclude-pattern type="relative">*/data/*</exclude-pattern>
     <arg name="colors"/>
@@ -23,6 +22,6 @@
     <rule ref="Generic.PHP.DisallowShortOpenTag"/>
     <rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
-    <rule ref="./vendor/api-skeletons/coding-standard/phpcs/Sniffs/Strings/ConcatenationSpacingSniff.php">
+    <rule ref="./phpcs/Sniffs/Strings/ConcatenationSpacingSniff.php">
     </rule>
 </ruleset>

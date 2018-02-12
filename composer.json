@@ -9,5 +9,7 @@
             "email": "tom.h.anderson@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "squizlabs/php_codesniffer": "^3.2"
+    }
 }
