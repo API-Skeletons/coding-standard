@@ -1,0 +1,13 @@
+{
+    "name": "api-skeletons/coding-standard",
+    "description": "The phpcs coding standard for API Skeletons",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom H Anderson",
+            "email": "tom.h.anderson@gmail.com"
+        }
+    ],
+    "require": {}
+}
