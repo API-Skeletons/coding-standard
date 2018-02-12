@@ -23,6 +23,6 @@
     <rule ref="Generic.PHP.DisallowShortOpenTag"/>
     <rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
-    <rule ref="./vendor/api-skeletons/coding-standard/phpcs/Sniffs/Strings/ConcatenationSpacingSniff.php">
+    <rule ref="./vendor/api-skeletons/coding-standard/phpcs/Sniffs/Strings/ConcatenationSpacingSniff.php"/>
     </rule>
 </ruleset>
